@@ -1,0 +1,73 @@
+<title>Renal Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal:#0d9488; --teal-light:#ccfbf1; --teal-mid:#5eead4;
+  --bg:#ffffff; --txt:#0f172a; --muted:#64748b;
+  --card:#f8fafc; --border:#e2e8f0; --radius:12px;
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f172a; --txt:#f1f5f9; --muted:#94a3b8;
+    --card:#1e293b; --border:#334155; --teal-light:#0d3d38;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f172a; --txt:#f1f5f9; --muted:#94a3b8;
+  --card:#1e293b; --border:#334155; --teal-light:#0d3d38;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);}
+body{display:flex;flex-direction:column;align-items:center;padding:0 16px 64px;}
+
+/* NAV */
+.nav{width:100%;max-width:760px;display:flex;justify-content:space-between;align-items:center;padding:20px 0 16px;border-bottom:2px solid var(--teal);margin-bottom:0;}
+.nav-brand{font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);}
+.nav-tag{font-size:.75rem;color:var(--muted);letter-spacing:.04em;}
+
+/* HERO */
+.hero{width:100%;max-width:760px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;padding:52px 0 44px;}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px;}
+.hero-title{font-family:'Oswald',sans-serif;font-size:3rem;line-height:1.08;text-wrap:balance;}
+.neph{width:200px;filter:drop-shadow(0 8px 28px rgba(13,148,136,.12));}
+
+/* GAMES */
+.games{width:100%;max-width:760px;}
+
+.game-card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;transition:box-shadow .18s,border-color .18s;}
+.game-card:hover{box-shadow:0 4px 24px rgba(13,148,136,.14);border-color:var(--teal-mid);}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.card-icon{font-size:2rem;line-height:1;}
+.card-title{font-family:'Oswald',sans-serif;font-size:1.35rem;}
+.card-arrow{font-size:1.1rem;color:var(--teal);}
+
+@media(max-width:600px){
+  .hero{grid-template-columns:1fr;padding:36px 0 32px;gap:24px;}
+  .neph{width:150px;margin:0 auto;order:-1;}
+  .hero-title{font-size:2.2rem;}
+}
+</style>
+
+<nav class="nav">
+  <span class="nav-brand">🫘 Renal Hub</span>
+  <span class="nav-tag">Exam Prep · Dr Kristeen Barker</span>
+</nav>
+
+<div class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Interactive Learning</p>
+    <h1 class="hero-title">Let the games begin</h1>
+  </div>
+  <img class="neph" src="neph.png" alt="Neph the kidney mascot">
+</div>
+
+<div class="games">
+  <a class="game-card" href="renal-escape-room.html">
+    <div class="card-top">
+      <div class="card-icon">🔐</div>
+      <div class="card-title">Renal Physiology Escape Room</div>
+      <div class="card-arrow">→</div>
+    </div>
+  </a>
+</div>
